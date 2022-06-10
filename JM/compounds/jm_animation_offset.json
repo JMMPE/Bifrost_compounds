@@ -1,0 +1,320 @@
+{
+    "header": {
+        "metadata": [
+            {
+                "metaName": "adskFileFormatVersion",
+                "metaValue": "100L"
+            }
+        ]
+    },
+    "namespaces": [],
+    "types": [],
+    "compounds": [
+        {
+            "name": "JM::jm_animation_offset",
+            "uriImported": "file:///jm_animation_offset.json",
+            "metadata": [
+                {
+                    "metaName": "documentation",
+                    "metaType": "string",
+                    "metaValue": "docs/jm_animation_offset.md"
+                },
+                {
+                    "metaName": "icon",
+                    "metaType": "string",
+                    "metaValue": "icon/jm_01.png"
+                },
+                {
+                    "metaName": "io_nodes",
+                    "metadata": [
+                        {
+                            "metaName": "io_inodes",
+                            "metadata": [
+                                {
+                                    "metaName": "input",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "-15.7954 78.0708"
+                                        },
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "size"
+                                                },
+                                                {
+                                                    "metaName": "start"
+                                                },
+                                                {
+                                                    "metaName": "step"
+                                                },
+                                                {
+                                                    "metaName": "clamp_min"
+                                                },
+                                                {
+                                                    "metaName": "clamp_max"
+                                                },
+                                                {
+                                                    "metaName": "frame"
+                                                },
+                                                {
+                                                    "metaName": "time_multiply"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "io_onodes",
+                            "metadata": [
+                                {
+                                    "metaName": "output",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "1230 122"
+                                        },
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "clamped"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "metaName": "ViewportRect",
+                    "metaType": "string",
+                    "metaValue": "-70 -104.285 1606 908.57"
+                },
+                {
+                    "metaName": "DisplayMode",
+                    "metaType": "string",
+                    "metaValue": "2"
+                },
+                {
+                    "metaName": "LayoutPos",
+                    "metaType": "string",
+                    "metaValue": "-658.833 -423"
+                }
+            ],
+            "ports": [
+                {
+                    "portName": "size",
+                    "portDirection": "input",
+                    "portType": "long",
+                    "portDefault": "1"
+                },
+                {
+                    "portName": "start",
+                    "portDirection": "input",
+                    "portDefaultType": "float",
+                    "portDefault": "0f"
+                },
+                {
+                    "portName": "step",
+                    "portDirection": "input",
+                    "portDefaultType": "float",
+                    "portDefault": "-0.100000001f"
+                },
+                {
+                    "portName": "clamped",
+                    "portDirection": "output"
+                },
+                {
+                    "portName": "clamp_min",
+                    "portDirection": "input"
+                },
+                {
+                    "portName": "clamp_max",
+                    "portDirection": "input",
+                    "portDefaultType": "float",
+                    "portDefault": "1f"
+                },
+                {
+                    "portName": "frame",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "0f"
+                },
+                {
+                    "portName": "time_multiply",
+                    "portDirection": "input",
+                    "portDefaultType": "float",
+                    "portDefault": "1f"
+                }
+            ],
+            "compoundNodes": [
+                {
+                    "nodeName": "add",
+                    "nodeType": "Core::Math::add",
+                    "multiInPortNames": [
+                        "sequence",
+                        "output1"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "620 113"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "clamp",
+                    "nodeType": "Core::Math::clamp",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "925 106"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "multiply1",
+                    "nodeType": "Core::Math::multiply",
+                    "multiInPortNames": [
+                        "frame",
+                        "output1"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "425.346 389.575"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "sequence_array",
+                    "nodeType": "Core::Array::sequence_array",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "315 9"
+                        }
+                    ]
+                }
+            ],
+            "connections": [
+                {
+                    "source": "add.output",
+                    "target": "clamp.value"
+                },
+                {
+                    "source": "clamp.clamped",
+                    "target": ".clamped"
+                },
+                {
+                    "source": "multiply1.output",
+                    "target": "add.first.output1"
+                },
+                {
+                    "source": "sequence_array.sequence",
+                    "target": "add.first.sequence"
+                },
+                {
+                    "source": ".size",
+                    "target": "sequence_array.size"
+                },
+                {
+                    "source": ".start",
+                    "target": "sequence_array.start"
+                },
+                {
+                    "source": ".step",
+                    "target": "sequence_array.step"
+                },
+                {
+                    "source": ".frame",
+                    "target": "multiply1.first.frame"
+                },
+                {
+                    "source": ".time_multiply",
+                    "target": "multiply1.first.output1"
+                },
+                {
+                    "source": ".clamp_min",
+                    "target": "clamp.min"
+                },
+                {
+                    "source": ".clamp_max",
+                    "target": "clamp.max"
+                }
+            ],
+            "values": [
+                {
+                    "valueName": "clamp.max",
+                    "valueType": "float",
+                    "value": "1f"
+                },
+                {
+                    "valueName": "sequence_array.size",
+                    "valueType": "long",
+                    "value": "52"
+                },
+                {
+                    "valueName": "sequence_array.start",
+                    "valueType": "float",
+                    "value": "0f"
+                },
+                {
+                    "valueName": "sequence_array.step",
+                    "valueType": "float",
+                    "value": "-0.5f"
+                }
+            ],
+            "reservedNodeNames": [
+                {
+                    "name": "input"
+                },
+                {
+                    "name": "output"
+                }
+            ]
+        }
+    ]
+}
